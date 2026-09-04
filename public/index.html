@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jubilant Bassoon · Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%BB%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+    <main class="app">
+      <header class="app__header">
+        <div class="brand">
+          <span class="brand__mark">🎻</span>
+          <div>
+            <h1 class="brand__title">Jubilant Bassoon</h1>
+            <p class="brand__subtitle">A tiny task manager to prove the environment works.</p>
+          </div>
+        </div>
+        <div class="stats" id="stats" aria-live="polite">
+          <span class="stats__pill" id="stat-total">0 tasks</span>
+          <span class="stats__pill stats__pill--done" id="stat-done">0 done</span>
+        </div>
+      </header>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <input
+          class="composer__input"
+          id="new-task"
+          name="title"
+          type="text"
+          placeholder="What needs doing?"
+          aria-label="New task title"
+          maxlength="140"
+          required
+        />
+        <button class="composer__button" type="submit">Add task</button>
+      </form>
+
+      <nav class="filters" id="filters" aria-label="Filter tasks">
+        <button class="filters__btn is-active" data-filter="all">All</button>
+        <button class="filters__btn" data-filter="active">Active</button>
+        <button class="filters__btn" data-filter="completed">Completed</button>
+      </nav>
+
+      <ul class="tasks" id="tasks"></ul>
+
+      <p class="empty" id="empty" hidden>Nothing here yet — add your first task above. ✨</p>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
