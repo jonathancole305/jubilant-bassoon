@@ -1,0 +1,30 @@
+{
+  "name": "jubilant-bassoon",
+  "version": "1.0.0",
+  "description": "A small, modern task manager web app (Express API + polished frontend) used to demonstrate the Cloud Agent development environment.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "express",
+    "tasks",
+    "demo"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "supertest": "^7.0.0"
+  }
+}
